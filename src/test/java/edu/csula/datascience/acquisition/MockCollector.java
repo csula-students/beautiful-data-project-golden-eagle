@@ -8,7 +8,8 @@ import java.util.stream.Collectors;
  * A mock implementation of collector for testing
  */
 public class MockCollector implements Collector<SimpleModel, MockData> {
-	
+
+/*	
     public Collection<SimpleModel> mungee(Collection<MockData> src) {
         // in your example, you might need to check src.hasNext() first
         return src
@@ -20,9 +21,9 @@ public class MockCollector implements Collector<SimpleModel, MockData> {
 
     public void save(Collection<SimpleModel> data) {
     }
-
+*/
 	@Override
-	public Boolean mungee(TweetModel src) {
+	public List<TweetModel> mungee(List<TweetModel> src) {
 		// TODO Auto-generated method stub
 		return null;
 	}
