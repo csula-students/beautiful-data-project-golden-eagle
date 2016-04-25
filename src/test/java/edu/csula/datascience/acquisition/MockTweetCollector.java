@@ -3,10 +3,10 @@ package edu.csula.datascience.acquisition;
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class MockTweetCollector implements Collector<SimpleTweetModel, MockTweetData>{
+public class MockTweetCollector implements TestCollectorInt<MockTweetData> {
 
 	@Override
-	public List<TweetModel> mungee(List<TweetModel> src) {
+	public List<MockTweetData> mungee(List<MockTweetData> src) {
 		
 		String pattern = "(https?:\\/\\/(?:www\\.|(?!www))[^\\s\\.]+\\.[^\\s]{2,}|www\\.[^\\s]+\\.[^\\s]{2,})";
 		
@@ -25,14 +25,4 @@ public class MockTweetCollector implements Collector<SimpleTweetModel, MockTweet
 		
 		return src;		
 	}
-
-	@Override
-	public void save(TweetModel data) {}
-
-	@Override
-	public List<TweetModel> getAllTweets() {
-		return null;
-	}
-
-
 }
