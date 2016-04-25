@@ -10,7 +10,7 @@ import org.junit.Test;
 import com.google.common.collect.Lists;
 
 public class TweetCollectorTest {
-	 private Collector<SimpleTweetModel, MockTweetData> collector;
+	private TestCollectorInt<MockTweetData> collector;
 	 private MockTweetSource source;
 	 
 	@Before
@@ -21,7 +21,7 @@ public class TweetCollectorTest {
 	
 	@Test
     public void mungee() throws Exception {
-		List<TweetModel> getTweets = new ArrayList<TweetModel>();
+		List<MockTweetData> getTweets = new ArrayList<MockTweetData>();
 		
 		getTweets.addAll(collector.mungee(source.getNext()));
 		
