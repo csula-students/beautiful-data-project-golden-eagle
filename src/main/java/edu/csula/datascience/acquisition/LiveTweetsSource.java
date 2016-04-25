@@ -59,16 +59,13 @@ public class LiveTweetsSource implements Source<Status>{
                  long tweetId = status.getId(); 
                  String content = status.getText();
                  
-                 //Create a model for the live data
-                 TweetModel memoryData = new TweetModel(username, profileLocation, tweetId, content);
-                 //check for the data validity 
-                 Boolean valid = data.mungee(memoryData);
-                 
-                 //store to MongoDB if data is correct
-                 if (valid) {
-                     System.out.println(++counter + ") username: " + username + " location: " + profileLocation + " tweetId " + tweetId + " Text: " + content );
-                	 data.save(memoryData);
-                 }
+                  
+                //Create a model for the live data
+                TweetModel memoryData = new TweetModel(username, profileLocation, tweetId, content);
+                
+                //store to MongoDB if data is correct
+                System.out.println(++counter + ") username: " + username + " location: " + profileLocation + " tweetId " + tweetId + " Text: " + content );
+                data.save(memoryData);
             }
             
 			@Override
