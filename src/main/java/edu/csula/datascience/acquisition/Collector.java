@@ -15,7 +15,7 @@ public interface Collector<T, R> {
     // Collection<T> mungee(Collection<R> src);
     // void save(Collection<T> data);
 	
-	Boolean mungee(TweetModel src);
+    List<TweetModel> mungee(List<TweetModel> src);
 	
     void save(TweetModel data);
     
