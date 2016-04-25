@@ -81,7 +81,7 @@ public class LiveTweetsCollector implements Collector<Status, Status>{
 			document.put("Content", data.getContent());
 		collection.insertOne(document);
 		//write data to json file
-		WriteToJson(data);
+		// WriteToJson(data);
 	}
 
 	private void WriteToJson(TweetModel data) {
@@ -96,7 +96,7 @@ public class LiveTweetsCollector implements Collector<Status, Status>{
 			e.printStackTrace();
 		}
  
-		try (FileWriter file = new FileWriter("C:\\Users\Dhaval\\Desktop\\datascience-spring-2016-master\\datadump.json", false)) {
+		try (FileWriter file = new FileWriter("datadump.json", false)) {
 			file.append(obj.toString());
 		} catch (IOException e) {
 			e.printStackTrace();
