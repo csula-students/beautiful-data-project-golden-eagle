@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  */
 public class TwitterCollector implements Collector<Status, Status> {
     
-	MongoClient mongoClient;
+MongoClient mongoClient;
     MongoDatabase database;
     MongoCollection<Document> collection;
     
@@ -31,6 +31,24 @@ public class TwitterCollector implements Collector<Status, Status> {
         // select collection by name `tweets`
         collection = database.getCollection("tweets");
     }
+
+	@Override
+	public List<TweetModel> mungee(List<TweetModel> src) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(TweetModel data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<TweetModel> getAllTweets() {
+		// TODO Auto-generated method stub
+		return null;
+	}
    
     /*
     @Override
@@ -54,21 +72,4 @@ public class TwitterCollector implements Collector<Status, Status> {
     //    collection.insertMany(documents);
     }
 */
-	@Override
-	public Boolean mungee(TweetModel src) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void save(TweetModel data) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public List<TweetModel> getAllTweets() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
