@@ -15,13 +15,13 @@ public class MockTweetSource implements Source<MockTweetData>{
 		return position < 1;
 	}
 
-	public List<TweetModel> getNext() {
-		List<TweetModel> tweets = new ArrayList<TweetModel>();
+	public List<MockTweetData> getNext() {
+		List<MockTweetData> tweets = new ArrayList<MockTweetData>();
 		
-		TweetModel data1 = new TweetModel("tom", "USA", 1, "Test Content 1");
-		TweetModel data2 = new TweetModel("sammy", null, 2, "Test Content 2");
-		TweetModel data3 = new TweetModel("John", "Canada", 3, "Test Content 3");
-		TweetModel data4 = new TweetModel("Tony", "Mexico", 4, "http://www.foufos.gr");
+		MockTweetData data1 = new MockTweetData("tom", "USA", 1, "Test Content 1");
+		MockTweetData data2 = new MockTweetData("sammy", null, 2, "Test Content 2");
+		MockTweetData data3 = new MockTweetData("John", "Canada", 3, "Test Content 3");
+		MockTweetData data4 = new MockTweetData("Tony", "Mexico", 4, "http://www.foufos.gr");
 		
 		tweets.add(data1);
 		tweets.add(data2);
