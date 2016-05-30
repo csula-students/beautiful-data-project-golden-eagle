@@ -59,8 +59,8 @@ if __name__ == '__main__':
 
     listener = TweetStreamListener()
 
-    auth = OAuthHandler("H0MB0igw64DmhPSEBLgRyuHbp", "oTUzVLLK1iJPCd95QJHI358s3zLlRzXaXhZf4gTxV0Fwq2nH8W")
-    auth.set_access_token("2889696923-qqMTF0enWj46GQASHZMpLmZyHTpqz8XkBlHw0Ck", "Ph5DztHQ7KgT9CokBZVuAolmJxRuPKg5C6ZMfkcF6D3aa")
+    auth = OAuthHandler("Consumer Key", "Consumer Secret")
+    auth.set_access_token("access_token", "access secret")
 
     stream = Stream(auth, listener)
     stream.filter(languages=['en'], track=['Java', 'Java Programming'], async=True)
